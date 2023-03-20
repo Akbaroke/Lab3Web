@@ -1,4 +1,4 @@
-# PROJECT PRAKTIKUM 1
+# PROJECT PRAKTIKUM 3 (PHP dan Database MySQL)
 
 **_Nama: Muhammad Akbar_** <br/>
 **_Nim : 312110483_** <br/>
