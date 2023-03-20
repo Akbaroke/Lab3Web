@@ -2,12 +2,12 @@
 include_once "includes/header.php";
 require_once 'requires/function.php';
 $request = $_SERVER['REQUEST_URI'];
-$path = '/Lab3Web/';
+$path = '/lab3web/';
 ?>
 
 <div class="container">
   <?php
-  switch ($request) {
+switch (strtolower($request)) {
     case $path:
       require __DIR__ . '/views/index.php';
       break;
