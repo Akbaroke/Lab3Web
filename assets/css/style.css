@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --green: #21331D;
+  --greenSoft: #21331D60;
+  --grey: #c5c5c5;
+  --greySoft: #F3F3F3;
+  --white: #FFFFFF;
+  --red: #ff3939;
+  --pink: #EC4899;
+  --greenLabel: #A7F3D0;
+  --pinkLabel: #F5D0FE;
+}
+
+
+* {
+  font-family: 'Barlow', sans-serif !important;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  color: var(--green);
+}
+
+.container {
+  padding: 50px;
+  max-width: 100vw;
+}
+
+
+/* ==> START HOME <==*/
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.home>.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home>.head>h1 {
+  font-size: 25px;
+  font-weight: 700;
+  text-shadow: 3px 3px 6px var(--greenSoft);
+  cursor: pointer;
+}
+
+.home>.head>a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  background-color: var(--green);
+  color: var(--white);
+  padding: 12px;
+  border-radius: 5px;
+}
+
+.home>.head>a>i {
+  color: var(--white);
+}
+
+.home>.body>table {
+  width: 100%;
+}
+
+.home>.body>table>thead>tr>th {
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: var(--greenSoft);
+  border: 2px solid var(--grey);
+}
+
+.home>.body>table>tbody>tr>td {
+  border: 2px solid var(--grey);
+  background-color: var(--greySoft);
+  text-align: center;
+  padding: 15px;
+  vertical-align: middle;
+}
+
+.home>.body .no {
+  font-weight: 600;
+}
+
+.home>.body .name div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.home>.body .name div p:nth-of-type(1) {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.home>.body .name div p:nth-of-type(2) {
+  width: max-content;
+  padding: 4px 5px;
+  background-color: var(--grey);
+  color: var(--white);
+  border-radius: 5px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.home>.body .price div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.home>.body .price p {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.home>.body .price .sell,
+.home>.body .price .buy {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.home>.body .price .sell>span {
+  padding: 4px 5px;
+  background-color: var(--pinkLabel);
+  color: var(--pink);
+  border-radius: 5px;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.home>.body .price .buy>span {
+  text-transform: uppercase;
+  padding: 4px 5px;
+  background-color: var(--greenLabel);
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 10px;
+}
+
+.home>.body .image {
+  position: relative;
+  height: 80px;
+}
+
+.home>.body .image>a>img {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  position: absolute;
+  right: 25%;
+  bottom: 25%;
+  box-shadow: 1px 1px 4px var(--greenSoft);
+}
+
+.home>.body .action div {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.home>.body .action div a {
+  text-decoration: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  border: 1px solid var(--green);
+}
+
+
+.home>.body .stock span {
+  display: inline-block;
+  background-color: var(--red);
+  color: var(--white);
+  padding: 5px 10px;
+  width: max-content;
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+
+.home>.body .stock {
+  font-weight: 500;
+}
+
+.home>.body .action div a:nth-child(2) {
+  background-color: var(--green);
+  border: 1px solid var(--green);
+}
+
+.home>.body .action div a:nth-child(2) i {
+  color: var(--white);
+}
+
+/* ==> END HOME <==*/
+
+
+/* ==> START FORM <==*/
+.form .head h1 {
+  font-size: 25px;
+  font-weight: 700;
+  text-shadow: 3px 3px 6px var(--greenSoft);
+  cursor: pointer;
+}
