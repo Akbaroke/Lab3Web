@@ -27,6 +27,22 @@
 }
 
 
+/* ==> Navigation Breadcrumb <== */
+.breadcrumb{
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.breadcrumb > .active{
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.breadcrumb > .active:hover{
+  text-decoration: underline;
+}
+
 /* ==> START HOME <==*/
 .home {
   display: flex;
@@ -210,9 +226,16 @@
 
 
 /* ==> START FORM <==*/
+.form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .form .head h1 {
   font-size: 25px;
   font-weight: 700;
   text-shadow: 3px 3px 6px var(--greenSoft);
   cursor: pointer;
+ 
 }

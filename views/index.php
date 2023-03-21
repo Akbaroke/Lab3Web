@@ -8,6 +8,9 @@ $result = mysqli_query($conn, $sql);
     <h1 onclick="location.reload();">Data Products</h1>
     <a href="create"><i class="ti ti-plus"></i> New Product</a>
   </div>
+  <div class="breadcrumb">
+    <span>Home</span>
+  </div>
   <div class="body">
     <table>
       <thead>
