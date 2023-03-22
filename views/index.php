@@ -9,7 +9,7 @@ $result = mysqli_query($conn, $sql);
     <a href="create"><i class="ti ti-plus"></i> New Product</a>
   </div>
   <div class="breadcrumb">
-    <span>Home</span>
+    <span><i class="ti ti-home-2"></i> Home</span>
   </div>
   <div class="body">
     <table>
