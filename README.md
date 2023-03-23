@@ -4,51 +4,59 @@
 **_Nim : 312110483_** <br/>
 **_Kelas : TI.21.A3_** <br/>
 
-<br/>
+<br/><br/>
 
-## **Directory Tree**
-```bash
-Lab3Web
-│ 
-├──.htaccess
-├──index.php
-├──README.md
-│
-├──assets
-│   ├──css
-│   │   ├──normalize.css
-│   │   └──style.css
-│   │
-│   ├──images
-│   │   ├──laptop.jpg
-│   │   ├──oppo.jpg
-│   │   ├──samsung.jpg
-│   │   └──xiaomi.jpg
-│   │
-│   ├──js
-│   │   └──script.js
-│   │
-│   └──sql
-│       └──latihan1.sql
-│
-├──includes
-│   ├──footer.php
-│   └──header.php
-│
-├──requires
-│   ├──connection.php
-│   └──function.php
-│
-├──screenshot
-│   └──tambah.JPG
-│
-└──views
-    ├──404.php
-    ├──create.php
-    ├──delete.php
-    ├──index.php
-    └──update.php
+## **Database**
+
+### _Output_ :
+<img src="screenshot/Database.JPG" style="border: 2px solid #333; border-radius: 5px; box-shadow: 2px 2px 4px #00000040">
+
+### _Code_ :
+```sql
+CREATE DATABASE latihan1;
+
+CREATE TABLE data_barang (
+    id_barang int(10) auto_increment Primary Key,
+    kategori varchar(30),
+    nama varchar(30),
+    gambar varchar(100),
+    harga_beli decimal(10,0),
+    harga_jual decimal(10,0),
+    stok int(4)
+);
 ```
+
+### _Info_ :
+- membuat database dengan nama `latihan1`
+- membuat tabel dengan nama `data_barang`
+- selain bisa menggunakan perintah `sql` juga bisa langsung import dari file `assets/sql/latihan1.sql`
+
+
+<br/><br/>
+
+## **Connection to Database**
+
+### _Output_ :
+<img src="screenshot/Database.JPG" style="border: 2px solid #333; border-radius: 5px; box-shadow: 2px 2px 4px #00000040">
+
+### _Code_ :
+```php
+$host = "localhost";
+$user = "root";
+$pass = "";
+$db = "latihan1";
+
+$conn = mysqli_connect($host, $user, $pass, $db);
+
+if (!$conn) {
+  die("Gagal terkoneksi dengan database : " . mysqli_connect_error());
+}
+
+```
+
+### _Info_ :
+- pengkondisian `!$conn` adalah jika gagal dalam mengkoneksikan maka akan menampilkan pesan error tersebut
+
 
 <br/><br/>
 
@@ -172,3 +180,49 @@ header('Location: ' . $path);
 ### _Info_ :
 - `$_GET['id'];` mengambil value dari parameter `id` pada method `GET`
 - melakukan perintah `SQL` yaitu menghapus product dengan parameter `id_barang`
+
+<br/>
+
+## **Directory Tree**
+```bash
+Lab3Web
+│ 
+├──.htaccess
+├──index.php
+├──README.md
+│
+├──assets
+│   ├──css
+│   │   ├──normalize.css
+│   │   └──style.css
+│   │
+│   ├──images
+│   │   ├──laptop.jpg
+│   │   ├──oppo.jpg
+│   │   ├──samsung.jpg
+│   │   └──xiaomi.jpg
+│   │
+│   ├──js
+│   │   └──script.js
+│   │
+│   └──sql
+│       └──latihan1.sql
+│
+├──includes
+│   ├──footer.php
+│   └──header.php
+│
+├──requires
+│   ├──connection.php
+│   └──function.php
+│
+├──screenshot
+│   └──tambah.JPG
+│
+└──views
+    ├──404.php
+    ├──create.php
+    ├──delete.php
+    ├──index.php
+    └──update.php
+```
