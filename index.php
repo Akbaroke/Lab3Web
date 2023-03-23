@@ -16,7 +16,7 @@ $url = $parsed_url['path'];
 // Check requested URL path and set page
 switch (strtolower($url)) {
   case $path:
-    $page = 'index';
+    $page = 'home';
     break;
   case $path . 'create':
     $page = 'create';

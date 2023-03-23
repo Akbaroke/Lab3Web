@@ -226,6 +226,6 @@ Lab3Web
     ├──404.php
     ├──create.php
     ├──delete.php
-    ├──index.php
+    ├──home.php
     └──update.php
 ```
