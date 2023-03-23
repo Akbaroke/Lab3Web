@@ -6,10 +6,10 @@
   --grey: #c5c5c5;
   --greySoft: #F3F3F3;
   --white: #FFFFFF;
-  --red: #ff393980;
-  --pink: #EC4899;
-  --greenLabel: #A7F3D0;
-  --pinkLabel: #F5D0FE;
+  --red: #a72222;
+  --pink: #F96DB2;
+  --greenLabel: #237055;
+  --pinkLabel: #3F084C;
   --blackWithOpacity: #00000040
 }
 
@@ -74,6 +74,7 @@
   color: var(--white);
   padding: 12px;
   border-radius: 5px;
+  box-shadow: 2px 2px 4px var(--blackWithOpacity);
 }
 
 .home>.head>a>i {
@@ -161,6 +162,7 @@
   text-transform: uppercase;
   padding: 4px 5px;
   background-color: var(--greenLabel);
+  color: var(--white);
   border-radius: 5px;
   font-weight: 500;
   font-size: 10px;
@@ -197,6 +199,7 @@
   align-items: center;
   background-color: var(--white);
   border: 1px solid var(--green);
+  box-shadow: 2px 2px 4px var(--blackWithOpacity);
 }
 
 
@@ -394,4 +397,55 @@ form>button:hover {
   transform: scale(0.98, 0.98);
 }
 
-/* ==> START FORM <==*/
+/* ==> END FORM <==*/
+
+
+/* ==> START 404 <==*/
+#error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+  padding: 100px;
+}
+
+#error>div {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#error>div>h1 {
+  font-size: 100px;
+  font-weight: 700;
+}
+
+#error>div>p {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+#error>a {
+  text-decoration: none;
+  padding: 10px;
+  width: 120px;
+  background-color: var(--green);
+  color: var(--white);
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: capitalize;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px var(--blackWithOpacity);
+  transition: all .3s;
+}
+
+#error>a>i {
+  color: var(--white);
+}
+
+#error>a:hover {
+  box-shadow: none;
+  transform: scale(0.98, 0.98);
+}

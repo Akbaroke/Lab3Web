@@ -1,20 +1,21 @@
 <?php
 error_reporting(E_ALL);
-require "conection.php";
+require "connection.php";
 
-function Rupiah($angka)
+function formatRupiah($angka)
 {
-	$result = "Rp " . number_format($angka, 0, ',', '.');
-	return $result;
+	return "Rp " . number_format($angka, 0, ',', '.');
 }
 
-
-function is_select($var, $val)
+function isSelected($var, $val)
 {
-	if ($var == $val) return 'selected="selected"';
-	return false;
+	return ($var == $val) ? 'selected="selected"' : '';
 }
 
+function isValidId($id)
+{
+	return isset($id) && !empty(trim($id));
+}
 
 // Create new product
 if (isset($_POST['create'])) {
@@ -32,12 +33,11 @@ if (isset($_POST['create'])) {
 			$gambar = $filename;
 		}
 	}
-	$sql = 'INSERT INTO data_barang (nama, kategori,harga_jual, harga_beli,stok, gambar)';
-	$sql .= "VALUE ('{$nama}', '{$kategori}','{$harga_jual}','{$harga_beli}', '{$stok}', '{$gambar}')";
+	$sql = "INSERT INTO data_barang (nama, kategori, harga_jual, harga_beli, stok, gambar) 
+            VALUES ('{$nama}', '{$kategori}', '{$harga_jual}', '{$harga_beli}', '{$stok}', '{$gambar}')";
 	$result = mysqli_query($conn, $sql);
-	header('location: /lab3web/');
+	header('Location: ' . $path);
 }
-
 
 // Update product
 if (isset($_POST['update'])) {
@@ -56,12 +56,16 @@ if (isset($_POST['update'])) {
 			$gambar = $filename;
 		}
 	}
-	$sql = 'UPDATE data_barang SET ';
-	$sql .= "nama = '{$nama}', kategori = '{$kategori}', ";
-	$sql .= "harga_jual = '{$harga_jual}', harga_beli = '{$harga_beli}',stok = '{$stok}' ";
-	if (!empty($gambar))
-		$sql .= ", gambar = '{$gambar}' ";
-	$sql .= "WHERE id_barang = '{$id}'";
+	$sql = "UPDATE data_barang SET 
+            nama = '{$nama}', 
+            kategori = '{$kategori}', 
+            harga_jual = '{$harga_jual}', 
+            harga_beli = '{$harga_beli}',
+            stok = '{$stok}'";
+	if (!empty($gambar)) {
+		$sql .= ", gambar = '{$gambar}'";
+	}
+	$sql .= " WHERE id_barang = '{$id}'";
 	$result = mysqli_query($conn, $sql);
-	header('location: /lab3web/');
+	header('Location: ' . $path);
 }

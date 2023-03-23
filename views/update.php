@@ -12,7 +12,7 @@ $data = mysqli_fetch_array($result);
     <h1 onclick="location.reload();">Update Product</h1>
   </div>
   <div class="breadcrumb">
-    <span onclick="window.location.href='/lab3web/'" class="active"><i class="ti ti-home-2"></i> Home</span>
+    <span onclick="window.location.href='<?= $path ?>'" class="active"><i class="ti ti-home-2"></i> Home</span>
     <i class="ti ti-chevron-right"></i>
     <span>Update Product</span>
   </div>
@@ -27,9 +27,9 @@ $data = mysqli_fetch_array($result);
         <label for="kategori">Category</label>
         <select name="kategori" required>
           <option value="">- choose -</option>
-          <option <?= is_select('Komputer', $data['kategori']) ?> value="Komputer">Komputer</option>
-          <option <?= is_select('Elektronik', $data['kategori']) ?> value="Elektronik">Elektronik</option>
-          <option <?= is_select('Handphone', $data['kategori']) ?> value="Handphone">Handphone</option>
+          <option <?= isSelected('Komputer', $data['kategori']) ?> value="Komputer">Komputer</option>
+          <option <?= isSelected('Elektronik', $data['kategori']) ?> value="Elektronik">Elektronik</option>
+          <option <?= isSelected('Handphone', $data['kategori']) ?> value="Handphone">Handphone</option>
         </select>
       </div>
       <div>

@@ -46,11 +46,11 @@ $result = mysqli_query($conn, $sql);
                 <div>
                   <div class="buy">
                     <span>buy</span>
-                    <p><?= Rupiah($row['harga_beli']) ?></p>
+                    <p><?= formatRupiah($row['harga_beli']) ?></p>
                   </div>
                   <div class="sell">
                     <span>sell</span>
-                    <p><?= Rupiah($row['harga_jual']) ?></p>
+                    <p><?= formatRupiah($row['harga_jual']) ?></p>
                   </div>
                 </div>
               </td>
