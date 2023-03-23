@@ -217,7 +217,10 @@ Lab3Web
 │   └──function.php
 │
 ├──screenshot
-│   └──tambah.JPG
+│   ├──Create.JPG
+│   ├──Database.JPG
+│   ├──Home.JPG
+│   └──Update.JPG
 │
 └──views
     ├──404.php
