@@ -167,7 +167,7 @@ if (isset($_POST['update'])) {
 
 <br/><br/>
 
-## **Delete Product**
+## **Delete**
 
 ### _Code_ :
 ```php
