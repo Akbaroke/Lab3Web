@@ -36,9 +36,6 @@ CREATE TABLE data_barang (
 
 ## **Connection to Database**
 
-### _Output_ :
-<img src="screenshot/Database.JPG" style="border: 2px solid #333; border-radius: 5px; box-shadow: 2px 2px 4px #00000040">
-
 ### _Code_ :
 ```php
 $host = "localhost";
