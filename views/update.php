@@ -12,7 +12,7 @@ $data = mysqli_fetch_array($result);
     <h1 onclick="location.reload();">Update Product</h1>
   </div>
   <div class="breadcrumb">
-    <span onclick="window.location.href='<?= $path ?>'" class="active"><i class="ti ti-home-2"></i> Home</span>
+    <span onclick="window.history.go(-1)" class="active"><i class="ti ti-home-2"></i> Home</span>
     <i class="ti ti-chevron-right"></i>
     <span>Update Product</span>
   </div>

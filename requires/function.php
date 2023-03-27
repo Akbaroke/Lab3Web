@@ -36,7 +36,7 @@ if (isset($_POST['create'])) {
 	$sql = "INSERT INTO data_barang (nama, kategori, harga_jual, harga_beli, stok, gambar) 
             VALUES ('{$nama}', '{$kategori}', '{$harga_jual}', '{$harga_beli}', '{$stok}', '{$gambar}')";
 	$result = mysqli_query($conn, $sql);
-	header('Location: ' . $path);
+	header('Location: home');
 }
 
 // Update product
@@ -67,5 +67,5 @@ if (isset($_POST['update'])) {
 	}
 	$sql .= " WHERE id_barang = '{$id}'";
 	$result = mysqli_query($conn, $sql);
-	header('Location: ' . $path);
+	header('Location: home');
 }

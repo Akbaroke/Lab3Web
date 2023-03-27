@@ -1,7 +1,4 @@
 <?php
-// Define base path
-$path = '/lab3web/';
-
 // Include header file
 include_once "includes/header.php";
 
@@ -9,23 +6,22 @@ include_once "includes/header.php";
 require_once 'requires/function.php';
 
 // Get requested URL path
-$request = $_SERVER['REQUEST_URI'];
-$parsed_url = parse_url($request);
-$url = $parsed_url['path'];
+$url = @$_REQUEST['url'];
 
 // Check requested URL path and set page
-switch (strtolower($url)) {
-  case $path:
+switch ($url) {
+  case "":
+  case "home":
     $page = 'home';
     break;
-  case $path . 'create':
+  case 'create':
     $page = 'create';
     break;
-  case $path . 'update':
+  case 'update':
     $page = isset($_GET['id']) ? isValidId($_GET['id']) ? 'update' : '404' : '404';
     break;
-  case $path . 'delete':
-    $page = isValidId($_GET['id']) ? 'delete' : '404';
+  case 'delete':
+    $page = isset($_GET['id']) ? isValidId($_GET['id']) ? 'delete' : '404' : '404';
     break;
   default:
     $page = '404';
