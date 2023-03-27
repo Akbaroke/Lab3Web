@@ -9,7 +9,7 @@ $data = mysqli_fetch_array($result);
 
 <div class="form">
   <div class="head">
-    <h1 onclick="location.reload();">Update Product</h1>
+    <h1 onclick="window.location.href='home'">Update Product</h1>
   </div>
   <div class="breadcrumb">
     <span onclick="window.history.go(-1)" class="active"><i class="ti ti-home-2"></i> Home</span>

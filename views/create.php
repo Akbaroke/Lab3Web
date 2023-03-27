@@ -3,7 +3,7 @@
     <h1 onclick="location.reload();">New Product</h1>
   </div>
   <div class="breadcrumb">
-    <span onclick="window.history.go(-1)" class="active"><i class="ti ti-home-2"></i> Home</span>
+    <span onclick="window.location.href='home'" class="active"><i class="ti ti-home-2"></i> Home</span>
     <i class="ti ti-chevron-right"></i>
     <span>New Product</span>
   </div>
